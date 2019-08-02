@@ -1,8 +1,8 @@
 @import url("https://fonts.googleapis.com/css?family=Playfair+Display&display=swap");
 
-@import url('https://fonts.googleapis.com/css?family=Kristi&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Kristi&display=swap");
 
-@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
 
 html,
 body {
@@ -20,15 +20,28 @@ body {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+a {
+  color: #000;
+}
+
+a:hover {
+  color: #ff7f6c;
 }
 
 .magazine-container {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 360px 0 360px 0 360px 0 360px;
-  grid-template-columns: 360px 360px 360px 360px;
+  grid-template-columns: 25% 25% 25% 25%;
   grid-gap: 0;
   position: relative;
+  width: 100%;
 }
 
 .magazine__item {
@@ -50,47 +63,93 @@ body {
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
-  height: 509px;
+  min-height: 200px;
   width: 100%;
   -webkit-filter: grayscale(100%) contrast(105%) brightness(0.8);
   filter: grayscale(100%) contrast(105%) brightness(0.8);
 }
 
+.magazine-text {
+  position: absolute;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  margin: 0 auto;
+}
+
 .magazine__title {
   color: #ff7f6c;
   font-family: "Playfair Display", serif;
-  font-size: 40rem;
+  font-size: 10rem;
   font-weight: lighter;
   text-transform: uppercase;
-  position: absolute;
-  top: -120px;
   width: 100%;
-  margin: 0;
+  margin-top: 0;
   text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
 }
 
-.magazine__subtitle
-{
+.magazine__subtitle {
   color: #ff7f6c;
-  font-family: 'Kristi', cursive;
-  font-size: 30rem;
-  position: absolute;
-  bottom: 200px;
-  left: 200px;
-  line-height:0.8em;
-   font-weight: 300;
+  font-family: "Kristi", cursive;
+  font-size: 13rem;
+  line-height: 0.8em;
+  font-weight: 300;
+  margin-top: 0;
+  width: 100%;
+  margin: 0 auto;
 }
 
-.magazine__editorname
-{
+.magazine__editorname {
   color: #ff7f6c;
-  font-family: 'Lato', sans-serif;
-  font-size: 5rem;
+  font-family: "Lato", sans-serif;
+  font-size: 1rem;
   text-transform: uppercase;
-  
+
   position: absolute;
-  bottom: 120px;
-  right: 100px;
+  bottom: 50px;
+  right: 8px;
   margin: 0;
-  
+}
+
+@media (min-width: 768px) {
+  .magazine__item {
+    height: 310px;
+  }
+
+  .magazine__title {
+    font-size: 25rem;
+  }
+
+  .magazine__subtitle {
+    font-size: 25rem;
+  }
+
+  .magazine__editorname {
+    font-size: 2rem;
+    bottom: 40px;
+  }
+}
+
+@media (min-width: 1199px) {
+  .magazine__item {
+    height: 509px;
+  }
+
+  .magazine__title,
+  .magazine__subtitle {
+    font-size: 40rem;
+  }
 }
