@@ -4,6 +4,11 @@ Created by: Carole Rennie Logan (@crgrieve) & Jamie Hammond (@developerontour)
 
 Insprired by the recent September Issue, we thought let's create a way to share the women who inspire us as coders!
 
+## What is it?
+A template for you to create your own September issue with photos of your inspiration.
+
+Have a look here at the sample: https://crgrieve.github.io/september-issue-code/
+
 ## What to do
 * Fork the repo
 * Edit the image urls to be the people who inspire you!
